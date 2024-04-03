@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Upload Animation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Upload videos</header>
+        <main>
+            <div class="circle">
+                <div class="arrow">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div> 
+                <div class="dash"></div>  
+                <div class="stripe"></div>  
+                <div class="inner-circle"></div>
+            </div>
+            <button>Start</button>
+        </main>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const circle = document.querySelector('.circle');
+        const arrow = document.querySelector('.arrow');
+        const dash = document.querySelector('.dash');
+        const stripe = document.querySelector('.stripe');
+        const innerCircle = document.querySelector('.inner-circle');
+
+        function startAnimations(){
+            arrow.style.animation = 'arrow 4.5s ease-in-out forwards';
+            dash.style.animation = 'dash 1s linear forwards';
+            stripe.style.animation = 'stripe 4.5s linear forwards';
+            circle.style.animation = 'circle 2s 1.25s linear forwards infinite';
+            innerCircle.style.animation = 'innerCircle 0.5s 4.25s linear forwards';            
+        }
+
+        btn.addEventListener('click', startAnimations)
+    </script>
+</body>
+</html>
